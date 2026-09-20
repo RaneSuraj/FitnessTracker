@@ -1,0 +1,676 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\MyProjects\\FitnessTracker\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|d:\\myprojects\\fitnesstracker\\fitnesstracker\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|solutionrelative:fitnesstracker\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|d:\\myprojects\\fitnesstracker\\fitnesstracker\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|solutionrelative:fitnesstracker\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|d:\\myprojects\\fitnesstracker\\fitnesstracker\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|solutionrelative:fitnesstracker\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|d:\\myprojects\\fitnesstracker\\fitnesstracker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|solutionrelative:fitnesstracker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|d:\\myprojects\\fitnesstracker\\fitnesstracker\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|solutionrelative:fitnesstracker\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|d:\\myprojects\\fitnesstracker\\fitnesstracker\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|solutionrelative:fitnesstracker\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|d:\\myprojects\\fitnesstracker\\fitnesstracker\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|solutionrelative:fitnesstracker\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|d:\\myprojects\\fitnesstracker\\fitnesstracker\\controllers\\calculatorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|solutionrelative:fitnesstracker\\controllers\\calculatorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|d:\\myprojects\\fitnesstracker\\fitnesstracker\\models\\caloriecalculatormodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|solutionrelative:fitnesstracker\\models\\caloriecalculatormodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|d:\\myprojects\\fitnesstracker\\fitnesstracker\\views\\calculator\\calorie.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|solutionrelative:fitnesstracker\\views\\calculator\\calorie.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|d:\\myprojects\\fitnesstracker\\fitnesstracker\\models\\bmicalculatormodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|solutionrelative:fitnesstracker\\models\\bmicalculatormodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|d:\\myprojects\\fitnesstracker\\fitnesstracker\\views\\calculator\\bmi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|solutionrelative:fitnesstracker\\views\\calculator\\bmi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|d:\\myprojects\\fitnesstracker\\fitnesstracker\\views\\meal\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|solutionrelative:fitnesstracker\\views\\meal\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|d:\\myprojects\\fitnesstracker\\fitnesstracker\\views\\meal\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|solutionrelative:fitnesstracker\\views\\meal\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|d:\\myprojects\\fitnesstracker\\fitnesstracker\\views\\meal\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|solutionrelative:fitnesstracker\\views\\meal\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|d:\\myprojects\\fitnesstracker\\fitnesstracker\\views\\meal\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|solutionrelative:fitnesstracker\\views\\meal\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|d:\\myprojects\\fitnesstracker\\fitnesstracker\\controllers\\workoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|solutionrelative:fitnesstracker\\controllers\\workoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|d:\\myprojects\\fitnesstracker\\fitnesstracker\\views\\workout\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|solutionrelative:fitnesstracker\\views\\workout\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|d:\\myprojects\\fitnesstracker\\fitnesstracker\\views\\workout\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|solutionrelative:fitnesstracker\\views\\workout\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|d:\\myprojects\\fitnesstracker\\fitnesstracker\\views\\workout\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|solutionrelative:fitnesstracker\\views\\workout\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|d:\\myprojects\\fitnesstracker\\fitnesstracker\\views\\workout\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|solutionrelative:fitnesstracker\\views\\workout\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|d:\\myprojects\\fitnesstracker\\fitnesstracker\\views\\account\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|solutionrelative:fitnesstracker\\views\\account\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|d:\\myprojects\\fitnesstracker\\fitnesstracker\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|solutionrelative:fitnesstracker\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|d:\\myprojects\\fitnesstracker\\fitnesstracker\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|solutionrelative:fitnesstracker\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|d:\\myprojects\\fitnesstracker\\fitnesstracker\\models\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|solutionrelative:fitnesstracker\\models\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|d:\\myprojects\\fitnesstracker\\fitnesstracker\\controllers\\mealcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|solutionrelative:fitnesstracker\\controllers\\mealcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|d:\\myprojects\\fitnesstracker\\fitnesstracker\\models\\sessionhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|solutionrelative:fitnesstracker\\models\\sessionhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|d:\\myprojects\\fitnesstracker\\fitnesstracker\\models\\meal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|solutionrelative:fitnesstracker\\models\\meal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|d:\\myprojects\\fitnesstracker\\fitnesstracker\\models\\workout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|solutionrelative:fitnesstracker\\models\\workout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|d:\\myprojects\\fitnesstracker\\fitnesstracker\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|solutionrelative:fitnesstracker\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|d:\\myprojects\\fitnesstracker\\fitnesstracker\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|solutionrelative:fitnesstracker\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|d:\\myprojects\\fitnesstracker\\fitnesstracker\\models\\datastore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|solutionrelative:fitnesstracker\\models\\datastore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|d:\\myprojects\\fitnesstracker\\fitnesstracker\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|solutionrelative:fitnesstracker\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|d:\\myprojects\\fitnesstracker\\fitnesstracker\\views\\meal\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|solutionrelative:fitnesstracker\\views\\meal\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|d:\\myprojects\\fitnesstracker\\fitnesstracker\\views\\workout\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|solutionrelative:fitnesstracker\\views\\workout\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|d:\\myprojects\\fitnesstracker\\fitnesstracker\\models\\mealoption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|solutionrelative:fitnesstracker\\models\\mealoption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|d:\\myprojects\\fitnesstracker\\fitnesstracker\\models\\exerciseoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|solutionrelative:fitnesstracker\\models\\exerciseoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|d:\\myprojects\\fitnesstracker\\fitnesstracker\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{729D6475-A5DB-42B5-A211-346F49BC18BC}|FitnessTracker\\FitnessTracker.csproj|solutionrelative:fitnesstracker\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 19,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "site.css",
+              "DocumentMoniker": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "FitnessTracker\\wwwroot\\css\\site.css",
+              "ToolTip": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "FitnessTracker\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAEgBAAAAAAAAAAAAwFwBAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-09-13T16:40:47.887Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "site.js",
+              "DocumentMoniker": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "FitnessTracker\\wwwroot\\js\\site.js",
+              "ToolTip": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "FitnessTracker\\wwwroot\\js\\site.js",
+              "ViewState": "AgIAADQAAAAAAAAAAAAowFkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-09-13T16:41:09.909Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Program.cs",
+              "RelativeDocumentMoniker": "FitnessTracker\\Program.cs",
+              "ToolTip": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Program.cs",
+              "RelativeToolTip": "FitnessTracker\\Program.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAowCYAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-13T16:37:18.629Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:16:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:15:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:14:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:13:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:12:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Views\\Meal\\Details.cshtml",
+              "RelativeDocumentMoniker": "FitnessTracker\\Views\\Meal\\Details.cshtml",
+              "ToolTip": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Views\\Meal\\Details.cshtml",
+              "RelativeToolTip": "FitnessTracker\\Views\\Meal\\Details.cshtml",
+              "ViewState": "AgIAALMAAAAAAAAAAAAowNgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-13T18:41:03.066Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "FitnessTracker\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "FitnessTracker\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAAAGgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-13T16:40:01.64Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "FitnessTracker\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "FitnessTracker\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAAB4AAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-13T16:39:31.496Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CalculatorController.cs",
+              "DocumentMoniker": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Controllers\\CalculatorController.cs",
+              "RelativeDocumentMoniker": "FitnessTracker\\Controllers\\CalculatorController.cs",
+              "ToolTip": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Controllers\\CalculatorController.cs",
+              "RelativeToolTip": "FitnessTracker\\Controllers\\CalculatorController.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAkwD8AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-13T17:16:36.503Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "BMI.cshtml",
+              "DocumentMoniker": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Views\\Calculator\\BMI.cshtml",
+              "RelativeDocumentMoniker": "FitnessTracker\\Views\\Calculator\\BMI.cshtml",
+              "ToolTip": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Views\\Calculator\\BMI.cshtml",
+              "RelativeToolTip": "FitnessTracker\\Views\\Calculator\\BMI.cshtml",
+              "ViewState": "AgIAAJQAAAAAAAAAAAAAAJwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-13T17:17:22.163Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Calorie.cshtml",
+              "DocumentMoniker": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Views\\Calculator\\Calorie.cshtml",
+              "RelativeDocumentMoniker": "FitnessTracker\\Views\\Calculator\\Calorie.cshtml",
+              "ToolTip": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Views\\Calculator\\Calorie.cshtml",
+              "RelativeToolTip": "FitnessTracker\\Views\\Calculator\\Calorie.cshtml",
+              "ViewState": "AgIAAOYAAAAAAAAAAAAAAP0AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-13T17:18:02.32Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Views\\Dashboard\\Index.cshtml",
+              "RelativeDocumentMoniker": "FitnessTracker\\Views\\Dashboard\\Index.cshtml",
+              "ToolTip": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Views\\Dashboard\\Index.cshtml",
+              "RelativeToolTip": "FitnessTracker\\Views\\Dashboard\\Index.cshtml",
+              "ViewState": "AgIAADMCAAAAAAAAAAAAAFACAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-13T18:04:39.263Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "FitnessTracker\\Controllers\\DashboardController.cs",
+              "ToolTip": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "FitnessTracker\\Controllers\\DashboardController.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAqwFwAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-13T18:03:07.531Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CalorieCalculatorModel.cs",
+              "DocumentMoniker": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Models\\CalorieCalculatorModel.cs",
+              "RelativeDocumentMoniker": "FitnessTracker\\Models\\CalorieCalculatorModel.cs",
+              "ToolTip": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Models\\CalorieCalculatorModel.cs",
+              "RelativeToolTip": "FitnessTracker\\Models\\CalorieCalculatorModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBwAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-13T18:53:37.818Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\appsettings.json",
+              "RelativeDocumentMoniker": "FitnessTracker\\appsettings.json",
+              "ToolTip": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\appsettings.json",
+              "RelativeToolTip": "FitnessTracker\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-09-13T20:12:18.361Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "BMICalculatorModel.cs",
+              "DocumentMoniker": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Models\\BMICalculatorModel.cs",
+              "RelativeDocumentMoniker": "FitnessTracker\\Models\\BMICalculatorModel.cs",
+              "ToolTip": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Models\\BMICalculatorModel.cs",
+              "RelativeToolTip": "FitnessTracker\\Models\\BMICalculatorModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-13T17:13:19.315Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Views\\Meal\\Edit.cshtml",
+              "RelativeDocumentMoniker": "FitnessTracker\\Views\\Meal\\Edit.cshtml",
+              "ToolTip": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Views\\Meal\\Edit.cshtml",
+              "RelativeToolTip": "FitnessTracker\\Views\\Meal\\Edit.cshtml",
+              "ViewState": "AgIAAH8AAAAAAAAAAAAowKQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-13T18:40:32.108Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "WorkoutController.cs",
+              "DocumentMoniker": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Controllers\\WorkoutController.cs",
+              "RelativeDocumentMoniker": "FitnessTracker\\Controllers\\WorkoutController.cs",
+              "ToolTip": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Controllers\\WorkoutController.cs",
+              "RelativeToolTip": "FitnessTracker\\Controllers\\WorkoutController.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAFIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-13T17:22:22.463Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Views\\Workout\\Details.cshtml",
+              "RelativeDocumentMoniker": "FitnessTracker\\Views\\Workout\\Details.cshtml",
+              "ToolTip": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Views\\Workout\\Details.cshtml",
+              "RelativeToolTip": "FitnessTracker\\Views\\Workout\\Details.cshtml",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAowHIAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-13T18:32:01.927Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Views\\Workout\\Edit.cshtml",
+              "RelativeDocumentMoniker": "FitnessTracker\\Views\\Workout\\Edit.cshtml",
+              "ToolTip": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Views\\Workout\\Edit.cshtml",
+              "RelativeToolTip": "FitnessTracker\\Views\\Workout\\Edit.cshtml",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAowJYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-13T18:30:44.29Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Profile.cshtml",
+              "DocumentMoniker": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Views\\Account\\Profile.cshtml",
+              "RelativeDocumentMoniker": "FitnessTracker\\Views\\Account\\Profile.cshtml",
+              "ToolTip": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Views\\Account\\Profile.cshtml",
+              "RelativeToolTip": "FitnessTracker\\Views\\Account\\Profile.cshtml",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAowIYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-13T18:28:55.071Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "FitnessTracker\\Controllers\\AccountController.cs",
+              "ToolTip": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "FitnessTracker\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAlwDYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-13T17:36:06.634Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Views\\Meal\\Index.cshtml",
+              "RelativeDocumentMoniker": "FitnessTracker\\Views\\Meal\\Index.cshtml",
+              "ToolTip": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Views\\Meal\\Index.cshtml",
+              "RelativeToolTip": "FitnessTracker\\Views\\Meal\\Index.cshtml",
+              "ViewState": "AgIAAKUAAAAAAAAAAAAowMoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-13T17:49:56.328Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Add.cshtml",
+              "DocumentMoniker": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Views\\Meal\\Add.cshtml",
+              "RelativeDocumentMoniker": "FitnessTracker\\Views\\Meal\\Add.cshtml",
+              "ToolTip": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Views\\Meal\\Add.cshtml",
+              "RelativeToolTip": "FitnessTracker\\Views\\Meal\\Add.cshtml",
+              "ViewState": "AgIAAHsAAAAAAAAAAAAowKAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-13T17:50:30.442Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "DashboardViewModel.cs",
+              "DocumentMoniker": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Models\\DashboardViewModel.cs",
+              "RelativeDocumentMoniker": "FitnessTracker\\Models\\DashboardViewModel.cs",
+              "ToolTip": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Models\\DashboardViewModel.cs",
+              "RelativeToolTip": "FitnessTracker\\Models\\DashboardViewModel.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA7wDEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-13T18:03:57.325Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Views\\Workout\\Index.cshtml",
+              "RelativeDocumentMoniker": "FitnessTracker\\Views\\Workout\\Index.cshtml",
+              "ToolTip": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Views\\Workout\\Index.cshtml",
+              "RelativeToolTip": "FitnessTracker\\Views\\Workout\\Index.cshtml",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAowJkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-13T17:48:36.965Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Add.cshtml",
+              "DocumentMoniker": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Views\\Workout\\Add.cshtml",
+              "RelativeDocumentMoniker": "FitnessTracker\\Views\\Workout\\Add.cshtml",
+              "ToolTip": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Views\\Workout\\Add.cshtml",
+              "RelativeToolTip": "FitnessTracker\\Views\\Workout\\Add.cshtml",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAowJIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-13T17:49:18.348Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "SessionHelper.cs",
+              "DocumentMoniker": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Models\\SessionHelper.cs",
+              "RelativeDocumentMoniker": "FitnessTracker\\Models\\SessionHelper.cs",
+              "ToolTip": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Models\\SessionHelper.cs",
+              "RelativeToolTip": "FitnessTracker\\Models\\SessionHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-13T17:29:22.858Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Workout.cs",
+              "DocumentMoniker": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Models\\Workout.cs",
+              "RelativeDocumentMoniker": "FitnessTracker\\Models\\Workout.cs",
+              "ToolTip": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Models\\Workout.cs",
+              "RelativeToolTip": "FitnessTracker\\Models\\Workout.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAowA8AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-13T17:15:27.758Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "FitnessTracker\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "FitnessTracker\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-13T15:01:46.738Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Meal.cs",
+              "DocumentMoniker": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Models\\Meal.cs",
+              "RelativeDocumentMoniker": "FitnessTracker\\Models\\Meal.cs",
+              "ToolTip": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Models\\Meal.cs",
+              "RelativeToolTip": "FitnessTracker\\Models\\Meal.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAowBsAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-13T17:16:03.49Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "MealController.cs",
+              "DocumentMoniker": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Controllers\\MealController.cs",
+              "RelativeDocumentMoniker": "FitnessTracker\\Controllers\\MealController.cs",
+              "ToolTip": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Controllers\\MealController.cs",
+              "RelativeToolTip": "FitnessTracker\\Controllers\\MealController.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAA7wGgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-13T17:23:38.439Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "FitnessTracker\\Views\\Account\\Register.cshtml",
+              "ToolTip": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "FitnessTracker\\Views\\Account\\Register.cshtml",
+              "ViewState": "AgIAABcAAAAAAAAAAAAowD4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-13T17:37:45.188Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "FitnessTracker\\Views\\Account\\Login.cshtml",
+              "ToolTip": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "FitnessTracker\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAFoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-13T17:36:40.249Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "DataStore.cs",
+              "DocumentMoniker": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Models\\DataStore.cs",
+              "RelativeDocumentMoniker": "FitnessTracker\\Models\\DataStore.cs",
+              "ToolTip": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Models\\DataStore.cs",
+              "RelativeToolTip": "FitnessTracker\\Models\\DataStore.cs",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAowIoAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-13T17:35:12.957Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Models\\User.cs",
+              "RelativeDocumentMoniker": "FitnessTracker\\Models\\User.cs",
+              "ToolTip": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Models\\User.cs",
+              "RelativeToolTip": "FitnessTracker\\Models\\User.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAowCcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-13T17:34:24.618Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Views\\Meal\\Create.cshtml",
+              "RelativeDocumentMoniker": "FitnessTracker\\Views\\Meal\\Create.cshtml",
+              "ToolTip": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Views\\Meal\\Create.cshtml",
+              "RelativeToolTip": "FitnessTracker\\Views\\Meal\\Create.cshtml",
+              "ViewState": "AgIAAJ0AAAAAAAAAAAAowMIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-13T17:25:03.992Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Views\\Workout\\Create.cshtml",
+              "RelativeDocumentMoniker": "FitnessTracker\\Views\\Workout\\Create.cshtml",
+              "ToolTip": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Views\\Workout\\Create.cshtml",
+              "RelativeToolTip": "FitnessTracker\\Views\\Workout\\Create.cshtml",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAowJsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-13T17:24:22.111Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "MealOption.cs",
+              "DocumentMoniker": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Models\\MealOption.cs",
+              "RelativeDocumentMoniker": "FitnessTracker\\Models\\MealOption.cs",
+              "ToolTip": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Models\\MealOption.cs",
+              "RelativeToolTip": "FitnessTracker\\Models\\MealOption.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAowDsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-13T17:14:43.024Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "ExerciseOptions.cs",
+              "DocumentMoniker": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Models\\ExerciseOptions.cs",
+              "RelativeDocumentMoniker": "FitnessTracker\\Models\\ExerciseOptions.cs",
+              "ToolTip": "D:\\MyProjects\\FitnessTracker\\FitnessTracker\\Models\\ExerciseOptions.cs",
+              "RelativeToolTip": "FitnessTracker\\Models\\ExerciseOptions.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA7wCgAAABsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-13T17:14:08.38Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

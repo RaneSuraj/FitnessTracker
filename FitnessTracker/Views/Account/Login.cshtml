@@ -1,0 +1,91 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="auth-container">
+    <div class="auth-card">
+        <div class="auth-header">
+            <h2>🔐 Login</h2>
+            <p class="text-muted">Welcome back to BeFit</p>
+        </div>
+
+        <form method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" class="form-control" placeholder="Enter your email" required />
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" class="form-control" placeholder="Enter your password" required />
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Login</button>
+        </form>
+
+        <div class="auth-footer">
+            <p>Don't have an account? <a href="/Account/Register">Register here</a></p>
+        </div>
+
+        <div class="demo-credentials">
+            <h4>🎯 Demo Credentials</h4>
+            <p><strong>Email:</strong> demo@befit.com</p>
+            <p><strong>Password:</strong> demo123</p>
+        </div>
+    </div>
+</div>
+
+<style>
+    .auth-container {
+        max-width: 450px;
+        margin: 60px auto;
+        padding: 20px;
+    }
+
+    .auth-card {
+        background: white;
+        border-radius: 16px;
+        padding: 40px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .auth-header {
+        text-align: center;
+        margin-bottom: 35px;
+    }
+
+        .auth-header h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+    .auth-footer {
+        text-align: center;
+        margin-top: 25px;
+        padding-top: 25px;
+        border-top: 1px solid #e5e7eb;
+    }
+
+    .demo-credentials {
+        background: #f0f9ff;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 25px;
+        text-align: center;
+    }
+
+        .demo-credentials h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #1e40af;
+        }
+
+        .demo-credentials p {
+            margin: 5px 0;
+            font-size: 0.9rem;
+        }
+</style>

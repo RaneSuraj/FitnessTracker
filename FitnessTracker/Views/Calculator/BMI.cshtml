@@ -1,0 +1,394 @@
+﻿@model FitnessTracker.Models.BMICalculatorModel
+@{
+    ViewData["Title"] = "BMI Calculator";
+}
+
+<div class="calculator-container">
+    <div class="calculator-header">
+        <h1>📏 BMI Calculator</h1>
+        <p>Calculate your Body Mass Index and find out your health status</p>
+    </div>
+
+    <div class="calculator-content">
+        <!-- Form Section -->
+        <div class="calculator-form">
+            <form asp-action="BMI" method="post">
+                <div class="form-group">
+                    <label asp-for="Weight">
+                        <span class="icon">⚖️</span> Weight (kg)
+                    </label>
+                    <input asp-for="Weight" type="number" step="0.1" class="form-control" placeholder="e.g., 70" />
+                    <span asp-validation-for="Weight" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Height">
+                        <span class="icon">📏</span> Height (cm)
+                    </label>
+                    <input asp-for="Height" type="number" step="0.1" class="form-control" placeholder="e.g., 175" />
+                    <span asp-validation-for="Height" class="text-danger"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-lg btn-block">
+                    Calculate BMI
+                </button>
+            </form>
+        </div>
+
+        <!-- Result Section -->
+        @if (Model != null && Model.BMI > 0)
+        {
+            <div class="calculator-result">
+                <div class="result-header">
+                    <h2>Your Results</h2>
+                </div>
+
+                <div class="bmi-display" style="border-color: @Model.CategoryColor;">
+                    <div class="bmi-value" style="color: @Model.CategoryColor;">
+                        @Model.BMI.ToString("F1")
+                    </div>
+                    <div class="bmi-label">BMI Score</div>
+                </div>
+
+                <div class="category-badge" style="background-color: @Model.CategoryColor;">
+                    @Model.Category
+                </div>
+
+                <!-- Health Status Section -->
+                <div class="health-status" style="border-left-color: @Model.CategoryColor;">
+                    <h4>🩺 Health Status</h4>
+                    <p>@Model.HealthStatus</p>
+                </div>
+
+                <div class="recommendation-box">
+                    <h4>💡 Recommendation</h4>
+                    <p>@Model.Recommendation</p>
+                </div>
+
+                <div class="bmi-chart">
+                    <h4>📊 BMI Categories</h4>
+                    <div class="chart-row">
+                        <span class="category-label">Underweight</span>
+                        <div class="category-bar underweight">
+                            <span>&lt; 18.5</span>
+                        </div>
+                    </div>
+                    <div class="chart-row">
+                        <span class="category-label">Normal Weight</span>
+                        <div class="category-bar normal">
+                            <span>18.5 - 24.9</span>
+                        </div>
+                    </div>
+                    <div class="chart-row">
+                        <span class="category-label">Overweight</span>
+                        <div class="category-bar overweight">
+                            <span>25 - 29.9</span>
+                        </div>
+                    </div>
+                    <div class="chart-row">
+                        <span class="category-label">Obese</span>
+                        <div class="category-bar obese">
+                            <span>≥ 30</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-summary">
+                    <div class="summary-item">
+                        <span class="summary-label">Weight:</span>
+                        <span class="summary-value">@Model.Weight kg</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-label">Height:</span>
+                        <span class="summary-value">@Model.Height cm</span>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <div class="info-section">
+        <h3>ℹ️ About BMI</h3>
+        <p>
+            Body Mass Index (BMI) is a measure of body fat based on height and weight.
+            It's a useful screening tool, but it doesn't directly measure body fat percentage.
+            BMI may not be accurate for athletes, elderly, or pregnant women.
+            Always consult with healthcare professionals for comprehensive health assessments.
+        </p>
+    </div>
+</div>
+
+<style>
+    .calculator-container {
+        max-width: 1200px;
+        margin: 30px auto;
+        padding: 0 20px;
+    }
+
+    .calculator-header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+        .calculator-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #111827;
+        }
+
+        .calculator-header p {
+            color: #6b7280;
+            font-size: 1.1rem;
+        }
+
+    .calculator-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        margin-bottom: 40px;
+    }
+
+        /* When no result, center the form */
+        .calculator-content:has(.calculator-form:only-child) {
+            grid-template-columns: 1fr;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    .calculator-form {
+        background: white;
+        padding: 40px;
+        border-radius: 16px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+        .calculator-form .form-group {
+            margin-bottom: 25px;
+        }
+
+        .calculator-form label {
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: block;
+            font-size: 1.1rem;
+            color: #374151;
+        }
+
+            .calculator-form label .icon {
+                font-size: 1.3rem;
+                margin-right: 8px;
+            }
+
+        .calculator-form .form-control {
+            height: 50px;
+            font-size: 1.1rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 0 15px;
+            transition: all 0.3s ease;
+        }
+
+            .calculator-form .form-control:focus {
+                border-color: #667eea;
+                box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+                outline: none;
+            }
+
+    .btn-block {
+        width: 100%;
+    }
+
+    .btn-lg {
+        padding: 15px 30px;
+        font-size: 1.1rem;
+    }
+
+    .calculator-result {
+        background: white;
+        padding: 40px;
+        border-radius: 16px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .result-header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+        .result-header h2 {
+            color: #111827;
+            margin: 0;
+            font-size: 2rem;
+        }
+
+    .bmi-display {
+        text-align: center;
+        padding: 30px;
+        background: #f9fafb;
+        border-radius: 16px;
+        border: 4px solid;
+        margin-bottom: 20px;
+    }
+
+    .bmi-value {
+        font-size: 4rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    .bmi-label {
+        font-size: 1.2rem;
+        color: #6b7280;
+        font-weight: 600;
+    }
+
+    .category-badge {
+        display: block;
+        text-align: center;
+        color: white;
+        padding: 15px;
+        border-radius: 12px;
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin-bottom: 25px;
+    }
+
+    .health-status {
+        background: #f0f9ff;
+        padding: 20px 25px;
+        border-radius: 12px;
+        border-left: 5px solid;
+        margin-bottom: 25px;
+    }
+
+        .health-status h4 {
+            margin: 0 0 12px 0;
+            color: #0c4a6e;
+            font-size: 1.1rem;
+        }
+
+        .health-status p {
+            margin: 0;
+            color: #075985;
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+    .recommendation-box {
+        background: #fef3c7;
+        padding: 20px 25px;
+        border-radius: 12px;
+        border-left: 5px solid #f59e0b;
+        margin-bottom: 25px;
+    }
+
+        .recommendation-box h4 {
+            margin: 0 0 12px 0;
+            color: #92400e;
+            font-size: 1.1rem;
+        }
+
+        .recommendation-box p {
+            margin: 0;
+            color: #78350f;
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+    .bmi-chart {
+        margin-bottom: 25px;
+    }
+
+        .bmi-chart h4 {
+            margin-bottom: 15px;
+            color: #111827;
+        }
+
+    .chart-row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+    }
+
+    .category-label {
+        width: 140px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #374151;
+    }
+
+    .category-bar {
+        flex: 1;
+        padding: 10px 15px;
+        border-radius: 8px;
+        color: white;
+        font-weight: 600;
+        text-align: center;
+    }
+
+        .category-bar.underweight {
+            background: #3b82f6;
+        }
+
+        .category-bar.normal {
+            background: #10b981;
+        }
+
+        .category-bar.overweight {
+            background: #f59e0b;
+        }
+
+        .category-bar.obese {
+            background: #ef4444;
+        }
+
+    .input-summary {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .summary-item {
+        background: #f9fafb;
+        padding: 15px;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    .summary-label {
+        display: block;
+        font-size: 0.9rem;
+        color: #6b7280;
+        margin-bottom: 5px;
+    }
+
+    .summary-value {
+        display: block;
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: #111827;
+    }
+
+    .info-section {
+        background: #eff6ff;
+        padding: 30px;
+        border-radius: 16px;
+        border-left: 4px solid #3b82f6;
+    }
+
+        .info-section h3 {
+            margin: 0 0 15px 0;
+            color: #1e40af;
+        }
+
+        .info-section p {
+            margin: 0;
+            color: #1e3a8a;
+            line-height: 1.7;
+        }
+</style>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

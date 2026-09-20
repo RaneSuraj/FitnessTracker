@@ -1,0 +1,624 @@
+﻿@model FitnessTracker.Models.DashboardViewModel
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="dashboard-container">
+    <!-- Welcome Header -->
+    <div class="welcome-banner">
+        <div class="welcome-content">
+            <h1>👋 Welcome back, @Model.User.FullName!</h1>
+            <p>Here's your fitness summary for today</p>
+        </div>
+        <div class="quick-actions">
+            <a href="/Workout/Add" class="quick-btn">
+                <span class="icon">🏋️</span>
+                <span>Add Workout</span>
+            </a>
+            <a href="/Meal/Add" class="quick-btn">
+                <span class="icon">🍽️</span>
+                <span>Add Meal</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Today's Summary Cards -->
+    <div class="stats-grid">
+        <div class="stat-card calories-in">
+            <div class="stat-icon">🍽️</div>
+            <div class="stat-details">
+                <h3>@Model.TodayCaloriesConsumed</h3>
+                <p>Calories Consumed</p>
+                <small>Today</small>
+            </div>
+        </div>
+
+        <div class="stat-card calories-out">
+            <div class="stat-icon">🔥</div>
+            <div class="stat-details">
+                <h3>@Model.TodayCaloriesBurned</h3>
+                <p>Calories Burned</p>
+                <small>Today</small>
+            </div>
+        </div>
+
+        <div class="stat-card net-calories @(Model.NetCaloriesToday > 0 ? "positive" : "negative")">
+            <div class="stat-icon">⚖️</div>
+            <div class="stat-details">
+                <h3>@Model.NetCaloriesToday</h3>
+                <p>Net Calories</p>
+                <small>@(Model.NetCaloriesToday > 0 ? "Surplus" : "Deficit")</small>
+            </div>
+        </div>
+
+        <div class="stat-card workout-time">
+            <div class="stat-icon">⏱️</div>
+            <div class="stat-details">
+                <h3>@Model.TodayWorkoutMinutes</h3>
+                <p>Minutes Exercised</p>
+                <small>Today</small>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nutrition Breakdown -->
+    <div class="nutrition-section">
+        <h2>📊 Today's Nutrition Breakdown</h2>
+        <div class="nutrition-cards">
+            <div class="nutrient-card protein">
+                <div class="nutrient-icon">🥩</div>
+                <div class="nutrient-info">
+                    <h4>@Model.TodayProtein g</h4>
+                    <p>Protein</p>
+                </div>
+            </div>
+            <div class="nutrient-card carbs">
+                <div class="nutrient-icon">🍞</div>
+                <div class="nutrient-info">
+                    <h4>@Model.TodayCarbs g</h4>
+                    <p>Carbs</p>
+                </div>
+            </div>
+            <div class="nutrient-card fat">
+                <div class="nutrient-icon">🥑</div>
+                <div class="nutrient-info">
+                    <h4>@Model.TodayFat g</h4>
+                    <p>Fat</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Weekly Progress Chart -->
+    <div class="chart-section">
+        <h2>📈 Weekly Calorie Tracking</h2>
+        <div class="chart-container">
+            <canvas id="weeklyChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Weekly Summary -->
+    <div class="weekly-summary">
+        <h2>📅 This Week's Summary</h2>
+        <div class="weekly-stats">
+            <div class="weekly-stat">
+                <span class="label">Workouts</span>
+                <span class="value">@Model.WeekWorkouts</span>
+            </div>
+            <div class="weekly-stat">
+                <span class="label">Meals Logged</span>
+                <span class="value">@Model.WeekMeals</span>
+            </div>
+            <div class="weekly-stat">
+                <span class="label">Calories In</span>
+                <span class="value">@Model.WeekCaloriesConsumed</span>
+            </div>
+            <div class="weekly-stat">
+                <span class="label">Calories Out</span>
+                <span class="value">@Model.WeekCaloriesBurned</span>
+            </div>
+            <div class="weekly-stat">
+                <span class="label">Net Calories</span>
+                <span class="value @(Model.NetCaloriesWeek > 0 ? "positive" : "negative")">
+                    @Model.NetCaloriesWeek
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Today's Activities -->
+    <div class="activities-section">
+        <div class="activity-column">
+            <h2>🏋️ Today's Workouts</h2>
+            @if (Model.TodayWorkouts.Any())
+            {
+                <div class="activity-list">
+                    @foreach (var workout in Model.TodayWorkouts)
+                    {
+                        <div class="activity-item workout-item">
+                            <div class="activity-icon">@workout.Icon</div>
+                            <div class="activity-info">
+                                <h4>@workout.Title</h4>
+                                <p>@workout.Type • @workout.DurationMinutes min • @workout.CaloriesBurned kcal</p>
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+            else
+            {
+                <div class="empty-state-small">
+                    <p>No workouts logged today</p>
+                    <a href="/Workout/Add" class="btn btn-sm btn-primary">Add Workout</a>
+                </div>
+            }
+        </div>
+
+        <div class="activity-column">
+            <h2>🍽️ Today's Meals</h2>
+            @if (Model.TodayMeals.Any())
+            {
+                <div class="activity-list">
+                    @foreach (var meal in Model.TodayMeals)
+                    {
+                        <div class="activity-item meal-item">
+                            <div class="activity-icon">@meal.Icon</div>
+                            <div class="activity-info">
+                                <h4>@meal.Name</h4>
+                                <p>@meal.MealType • @meal.Calories kcal • P:@meal.Protein C:@meal.Carbs F:@meal.Fat</p>
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+            else
+            {
+                <div class="empty-state-small">
+                    <p>No meals logged today</p>
+                    <a href="/Meal/Add" class="btn btn-sm btn-success">Add Meal</a>
+                </div>
+            }
+        </div>
+    </div>
+
+    <!-- Progress Insights -->
+    <div class="insights-section">
+        <h2>💡 Insights & Tips</h2>
+        <div class="insight-cards">
+            @if (Model.NetCaloriesToday > 500)
+            {
+                <div class="insight-card warning">
+                    <span class="insight-icon">⚠️</span>
+                    <p>You're in a calorie surplus today. Consider adding more exercise or reducing portion sizes.</p>
+                </div>
+            }
+            else if (Model.NetCaloriesToday < -500)
+            {
+                <div class="insight-card success">
+                    <span class="insight-icon">✅</span>
+                    <p>Great job! You're in a calorie deficit, perfect for weight loss.</p>
+                </div>
+            }
+
+            @if (Model.TodayWorkoutMinutes >= 30)
+            {
+                <div class="insight-card success">
+                    <span class="insight-icon">🎯</span>
+                    <p>Excellent! You've met the recommended 30 minutes of daily exercise.</p>
+                </div>
+            }
+            else if (Model.TodayWorkoutMinutes > 0)
+            {
+                <div class="insight-card info">
+                    <span class="insight-icon">💪</span>
+                    <p>Good start! Try to reach 30 minutes of exercise today.</p>
+                </div>
+            }
+
+            @if (Model.TodayProtein < 50 && Model.TodayMeals.Any())
+            {
+                <div class="insight-card warning">
+                    <span class="insight-icon">🥩</span>
+                    <p>Consider adding more protein to your diet. Aim for at least 50g per day.</p>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<style>
+    .dashboard-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .welcome-banner {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 40px;
+        border-radius: 16px;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .welcome-content h1 {
+        margin: 0;
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+
+    .welcome-content p {
+        margin: 10px 0 0 0;
+        opacity: 0.9;
+        font-size: 1.1rem;
+    }
+
+    .quick-actions {
+        display: flex;
+        gap: 15px;
+    }
+
+    .quick-btn {
+        background: rgba(255,255,255,0.2);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255,255,255,0.3);
+        padding: 15px 25px;
+        border-radius: 12px;
+        color: white;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        transition: all 0.3s;
+        font-weight: 600;
+    }
+
+        .quick-btn:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+            color: white;
+        }
+
+        .quick-btn .icon {
+            font-size: 1.5rem;
+        }
+
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+
+    .stat-card {
+        background: white;
+        padding: 25px;
+        border-radius: 16px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        transition: transform 0.2s;
+    }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+    .stat-icon {
+        font-size: 3rem;
+    }
+
+    .stat-details h3 {
+        margin: 0;
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+
+    .stat-details p {
+        margin: 5px 0;
+        color: #6b7280;
+        font-weight: 600;
+    }
+
+    .stat-details small {
+        color: #9ca3af;
+    }
+
+    .calories-in {
+        border-left: 5px solid #3b82f6;
+    }
+
+    .calories-out {
+        border-left: 5px solid #ef4444;
+    }
+
+    .net-calories.positive {
+        border-left: 5px solid #f59e0b;
+    }
+
+    .net-calories.negative {
+        border-left: 5px solid #10b981;
+    }
+
+    .workout-time {
+        border-left: 5px solid #8b5cf6;
+    }
+
+    .nutrition-section {
+        background: white;
+        padding: 30px;
+        border-radius: 16px;
+        margin-bottom: 30px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+        .nutrition-section h2 {
+            margin-top: 0;
+        }
+
+    .nutrition-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .nutrient-card {
+        background: #f9fafb;
+        padding: 20px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .nutrient-icon {
+        font-size: 2.5rem;
+    }
+
+    .nutrient-info h4 {
+        margin: 0;
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+
+    .nutrient-info p {
+        margin: 5px 0 0 0;
+        color: #6b7280;
+    }
+
+    .protein {
+        border-left: 4px solid #ef4444;
+    }
+
+    .carbs {
+        border-left: 4px solid #f59e0b;
+    }
+
+    .fat {
+        border-left: 4px solid #10b981;
+    }
+
+    .chart-section {
+        background: white;
+        padding: 30px;
+        border-radius: 16px;
+        margin-bottom: 30px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+        .chart-section h2 {
+            margin-top: 0;
+        }
+
+    .chart-container {
+        position: relative;
+        height: 300px;
+    }
+
+    .weekly-summary {
+        background: white;
+        padding: 30px;
+        border-radius: 16px;
+        margin-bottom: 30px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+        .weekly-summary h2 {
+            margin-top: 0;
+        }
+
+    .weekly-stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 20px;
+    }
+
+    .weekly-stat {
+        text-align: center;
+        padding: 20px;
+        background: #f9fafb;
+        border-radius: 12px;
+    }
+
+        .weekly-stat .label {
+            display: block;
+            color: #6b7280;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .weekly-stat .value {
+            display: block;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #111827;
+        }
+
+            .weekly-stat .value.positive {
+                color: #f59e0b;
+            }
+
+            .weekly-stat .value.negative {
+                color: #10b981;
+            }
+
+    .activities-section {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+
+    .activity-column {
+        background: white;
+        padding: 25px;
+        border-radius: 16px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+        .activity-column h2 {
+            margin-top: 0;
+        }
+
+    .activity-list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .activity-item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 15px;
+        background: #f9fafb;
+        border-radius: 12px;
+    }
+
+    .activity-icon {
+        font-size: 2rem;
+    }
+
+    .activity-info h4 {
+        margin: 0;
+        font-size: 1.1rem;
+    }
+
+    .activity-info p {
+        margin: 5px 0 0 0;
+        color: #6b7280;
+        font-size: 0.9rem;
+    }
+
+    .empty-state-small {
+        text-align: center;
+        padding: 40px;
+        color: #9ca3af;
+    }
+
+    .insights-section {
+        background: white;
+        padding: 30px;
+        border-radius: 16px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+        .insights-section h2 {
+            margin-top: 0;
+        }
+
+    .insight-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .insight-card {
+        padding: 20px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+        .insight-card.success {
+            background: #d1fae5;
+            border-left: 4px solid #10b981;
+        }
+
+        .insight-card.warning {
+            background: #fed7aa;
+            border-left: 4px solid #f59e0b;
+        }
+
+        .insight-card.info {
+            background: #dbeafe;
+            border-left: 4px solid #3b82f6;
+        }
+
+    .insight-icon {
+        font-size: 1.5rem;
+    }
+
+    .insight-card p {
+        margin: 0;
+        font-weight: 500;
+    }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // Weekly Chart
+    const ctx = document.getElementById('weeklyChart').getContext('2d');
+    const weeklyData = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.WeeklyData));
+
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: weeklyData.map(d => d.DayName),
+            datasets: [
+                {
+                    label: 'Calories Consumed',
+                    data: weeklyData.map(d => d.CaloriesConsumed),
+                    borderColor: '#3b82f6',
+                    backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                    tension: 0.4,
+                    fill: true
+                },
+                {
+                    label: 'Calories Burned',
+                    data: weeklyData.map(d => d.CaloriesBurned),
+                    borderColor: '#ef4444',
+                    backgroundColor: 'rgba(239, 68, 68, 0.1)',
+                    tension: 0.4,
+                    fill: true
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: false
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
+

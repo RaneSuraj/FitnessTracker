@@ -1,0 +1,156 @@
+﻿@model FitnessTracker.Models.Workout
+@{
+    ViewData["Title"] = "Add Workout";
+    var exercises = ViewBag.ExerciseOptions as List<FitnessTracker.Models.ExerciseOption>;
+}
+
+<div class="form-container">
+    <div class="form-card">
+        <div class="form-header">
+            <h2>➕ Add Workout</h2>
+            <p class="text-muted">Select an exercise or create your own</p>
+        </div>
+
+        <form method="post" id="workoutForm">
+            <!-- Exercise Selection Grid -->
+            <div class="exercise-selection">
+                <h4>Select Exercise</h4>
+                <div class="exercise-grid" id="exerciseGrid">
+                    @foreach (var exercise in exercises)
+                    {
+                        <div class="exercise-option"
+                             data-name="@exercise.Name"
+                             data-type="@exercise.Type"
+                             data-calories="@exercise.CaloriesPerHour"
+                             data-is-custom="@(exercise.Name == "Other" ? "true" : "false")">
+                            <div class="exercise-icon">@exercise.Icon</div>
+                            <div class="exercise-name">@exercise.Name</div>
+                            @if (exercise.Name != "Other")
+                            {
+                                <div class="exercise-meta">@exercise.CaloriesPerHour cal/hr</div>
+                            }
+                        </div>
+                    }
+                </div>
+            </div>
+
+            <input type="hidden" name="selectedExercise" id="selectedExercise" />
+            <input type="hidden" name="isCustom" id="isCustom" value="false" />
+
+            <!-- Custom Workout Name (shown when "Other" is selected) -->
+            <div class="form-group" id="customNameGroup" style="display: none;">
+                <label asp-for="Title">Workout Name</label>
+                <input asp-for="Title" class="form-control" placeholder="e.g., Mountain Climbing" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+
+            <!-- Type Selection (shown when "Other" is selected) -->
+            <div class="form-group" id="customTypeGroup" style="display: none;">
+                <label asp-for="Type">Workout Type</label>
+                <select asp-for="Type" class="form-control">
+                    <option value="">Select Type</option>
+                    <option value="Cardio">Cardio</option>
+                    <option value="Strength">Strength</option>
+                    <option value="Flexibility">Flexibility</option>
+                    <option value="Sports">Sports</option>
+                </select>
+                <span asp-validation-for="Type" class="text-danger"></span>
+            </div>
+
+            <!-- Workout Details -->
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label asp-for="DurationMinutes">Duration (minutes)</label>
+                    <input asp-for="DurationMinutes" type="number" class="form-control" placeholder="e.g., 30" id="durationInput" />
+                    <span asp-validation-for="DurationMinutes" class="text-danger"></span>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label asp-for="CaloriesBurned">Calories Burned</label>
+                    <input asp-for="CaloriesBurned" type="number" class="form-control" placeholder="Auto-calculated" id="caloriesInput" />
+                    <span asp-validation-for="CaloriesBurned" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="WorkoutDate">Workout Date</label>
+                <input asp-for="WorkoutDate" type="date" class="form-control" />
+                <span asp-validation-for="WorkoutDate" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Description">Notes (Optional)</label>
+                <textarea asp-for="Description" class="form-control" rows="3" placeholder="Add any notes about this workout..."></textarea>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Add Workout</button>
+                <a href="/Workout/Index" class="btn btn-outline">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        let selectedExerciseName = '';
+        let caloriesPerHour = 0;
+        let isCustomWorkout = false;
+
+        // Exercise selection
+        document.querySelectorAll('.exercise-option').forEach(option => {
+            option.addEventListener('click', function() {
+                // Remove previous selection
+                document.querySelectorAll('.exercise-option').forEach(opt => opt.classList.remove('selected'));
+
+                // Mark as selected
+                this.classList.add('selected');
+
+                // Get exercise data
+                selectedExerciseName = this.getAttribute('data-name');
+                caloriesPerHour = parseInt(this.getAttribute('data-calories'));
+                isCustomWorkout = this.getAttribute('data-is-custom') === 'true';
+
+                document.getElementById('selectedExercise').value = selectedExerciseName;
+                document.getElementById('isCustom').value = isCustomWorkout;
+
+                // Show/hide custom fields
+                if (isCustomWorkout) {
+                    document.getElementById('customNameGroup').style.display = 'block';
+                    document.getElementById('customTypeGroup').style.display = 'block';
+                } else {
+                    document.getElementById('customNameGroup').style.display = 'none';
+                    document.getElementById('customTypeGroup').style.display = 'none';
+                    calculateCalories();
+                }
+            });
+        });
+
+        // Auto-calculate calories when duration changes
+        document.getElementById('durationInput').addEventListener('input', function() {
+            if (!isCustomWorkout) {
+                calculateCalories();
+            }
+        });
+
+        function calculateCalories() {
+            const duration = parseInt(document.getElementById('durationInput').value) || 0;
+            if (caloriesPerHour > 0 && duration > 0) {
+                const calories = Math.round((caloriesPerHour * duration) / 60);
+                document.getElementById('caloriesInput').value = calories;
+            }
+        }
+
+        // Form validation
+        document.getElementById('workoutForm').addEventListener('submit', function(e) {
+            if (!selectedExerciseName) {
+                e.preventDefault();
+                alert('Please select an exercise');
+            }
+        });
+    </script>
+}

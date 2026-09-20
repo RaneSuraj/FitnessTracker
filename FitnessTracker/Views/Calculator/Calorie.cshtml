@@ -1,0 +1,496 @@
+﻿@model FitnessTracker.Models.CalorieCalculatorModel
+@{
+    ViewData["Title"] = "Calorie Calculator";
+}
+
+<div class="calculator-container">
+    <div class="calculator-header">
+        <h1>🔥 Calorie Calculator</h1>
+        <p>Calculate your daily caloric needs and macronutrient distribution</p>
+    </div>
+
+    <div class="calculator-content">
+        <!-- Form Section -->
+        <div class="calculator-form">
+            <form asp-action="Calorie" method="post">
+                <div class="form-group">
+                    <label asp-for="Age">
+                        <span class="icon">🎂</span> Age (years)
+                    </label>
+                    <input asp-for="Age" type="number" class="form-control" placeholder="e.g., 25" />
+                    <span asp-validation-for="Age" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Gender">
+                        <span class="icon">👤</span> Gender
+                    </label>
+                    <select asp-for="Gender" class="form-control">
+                        <option value="">Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                    <span asp-validation-for="Gender" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Weight">
+                        <span class="icon">⚖️</span> Weight (kg)
+                    </label>
+                    <input asp-for="Weight" type="number" step="0.1" class="form-control" placeholder="e.g., 70" />
+                    <span asp-validation-for="Weight" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Height">
+                        <span class="icon">📏</span> Height (cm)
+                    </label>
+                    <input asp-for="Height" type="number" step="0.1" class="form-control" placeholder="e.g., 175" />
+                    <span asp-validation-for="Height" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="ActivityLevel">
+                        <span class="icon">🏃</span> Activity Level
+                    </label>
+                    <select asp-for="ActivityLevel" class="form-control">
+                        <option value="">Select Activity Level</option>
+                        <option value="Sedentary">Sedentary (Little or no exercise)</option>
+                        <option value="Light">Light (Exercise 1-3 days/week)</option>
+                        <option value="Moderate">Moderate (Exercise 3-5 days/week)</option>
+                        <option value="Active">Active (Exercise 6-7 days/week)</option>
+                        <option value="VeryActive">Very Active (Intense exercise daily)</option>
+                    </select>
+                    <span asp-validation-for="ActivityLevel" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Goal">
+                        <span class="icon">🎯</span> Goal
+                    </label>
+                    <select asp-for="Goal" class="form-control">
+                        <option value="">Select Your Goal</option>
+                        <option value="Lose">Lose Weight (0.5 kg/week)</option>
+                        <option value="Maintain">Maintain Weight</option>
+                        <option value="Gain">Gain Weight (0.5 kg/week)</option>
+                    </select>
+                    <span asp-validation-for="Goal" class="text-danger"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-lg btn-block">
+                    Calculate Calories
+                </button>
+            </form>
+        </div>
+
+        <!-- Result Section -->
+        @if (Model != null && Model.DailyCalories > 0)
+        {
+            <div class="calculator-result">
+                <div class="result-header">
+                    <h2>Your Results</h2>
+                </div>
+
+                <div class="goal-display">
+                    <div class="goal-icon">🎯</div>
+                    <div class="goal-text">@Model.GoalDescription</div>
+                </div>
+
+                <div class="calorie-display">
+                    <div class="calorie-value">
+                        @Model.DailyCalories.ToString("F0")
+                    </div>
+                    <div class="calorie-label">Daily Calories</div>
+                </div>
+
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-icon">⚡</div>
+                        <div class="metric-value">@Model.BMR.ToString("F0")</div>
+                        <div class="metric-label">BMR</div>
+                        <div class="metric-desc">Basal Metabolic Rate</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon">🔥</div>
+                        <div class="metric-value">@Model.TDEE.ToString("F0")</div>
+                        <div class="metric-label">TDEE</div>
+                        <div class="metric-desc">Total Daily Energy</div>
+                    </div>
+                </div>
+
+                <div class="macros-section">
+                    <h4>📊 Recommended Macronutrients</h4>
+                    <div class="macro-bars">
+                        <div class="macro-item">
+                            <div class="macro-header">
+                                <span class="macro-name">🥩 Protein</span>
+                                <span class="macro-value">@Model.ProteinGrams.ToString("F0")g</span>
+                            </div>
+                            <div class="macro-bar">
+                                <div class="macro-fill protein-fill" style="width: 30%"></div>
+                            </div>
+                            <div class="macro-percentage">30% of calories</div>
+                        </div>
+
+                        <div class="macro-item">
+                            <div class="macro-header">
+                                <span class="macro-name">🍞 Carbs</span>
+                                <span class="macro-value">@Model.CarbsGrams.ToString("F0")g</span>
+                            </div>
+                            <div class="macro-bar">
+                                <div class="macro-fill carbs-fill" style="width: 40%"></div>
+                            </div>
+                            <div class="macro-percentage">40% of calories</div>
+                        </div>
+
+                        <div class="macro-item">
+                            <div class="macro-header">
+                                <span class="macro-name">🥑 Fats</span>
+                                <span class="macro-value">@Model.FatGrams.ToString("F0")g</span>
+                            </div>
+                            <div class="macro-bar">
+                                <div class="macro-fill fats-fill" style="width: 30%"></div>
+                            </div>
+                            <div class="macro-percentage">30% of calories</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-summary">
+                    <div class="summary-row">
+                        <span class="summary-label">Age:</span>
+                        <span class="summary-value">@Model.Age years</span>
+                    </div>
+                    <div class="summary-row">
+                        <span class="summary-label">Gender:</span>
+                        <span class="summary-value">@Model.Gender</span>
+                    </div>
+                    <div class="summary-row">
+                        <span class="summary-label">Weight:</span>
+                        <span class="summary-value">@Model.Weight kg</span>
+                    </div>
+                    <div class="summary-row">
+                        <span class="summary-label">Height:</span>
+                        <span class="summary-value">@Model.Height cm</span>
+                    </div>
+                    <div class="summary-row">
+                        <span class="summary-label">Activity:</span>
+                        <span class="summary-value">@Model.ActivityLevel</span>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <div class="info-section">
+        <h3>ℹ️ About Calorie Calculation</h3>
+        <p>
+            This calculator uses the Mifflin-St Jeor equation to estimate your Basal Metabolic Rate (BMR)
+            and calculates your Total Daily Energy Expenditure (TDEE) based on your activity level.
+            The recommended calorie intake is adjusted according to your goal (lose, maintain, or gain weight).
+            Macronutrient distribution follows a balanced 40/30/30 ratio (Carbs/Protein/Fat).
+        </p>
+    </div>
+</div>
+
+<style>
+    .calculator-container {
+        max-width: 1200px;
+        margin: 30px auto;
+        padding: 0 20px;
+    }
+
+    .calculator-header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+        .calculator-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #111827;
+        }
+
+        .calculator-header p {
+            color: #6b7280;
+            font-size: 1.1rem;
+        }
+
+    .calculator-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        margin-bottom: 40px;
+    }
+
+        /* When no result, center the form */
+        .calculator-content:has(.calculator-form:only-child) {
+            grid-template-columns: 1fr;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    .calculator-form {
+        background: white;
+        padding: 40px;
+        border-radius: 16px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+        .calculator-form .form-group {
+            margin-bottom: 25px;
+        }
+
+        .calculator-form label {
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: block;
+            font-size: 1.1rem;
+            color: #374151;
+        }
+
+            .calculator-form label .icon {
+                font-size: 1.3rem;
+                margin-right: 8px;
+            }
+
+        .calculator-form .form-control {
+            height: 50px;
+            font-size: 1.1rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 0 15px;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+            .calculator-form .form-control:focus {
+                border-color: #f59e0b;
+                box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+                outline: none;
+            }
+
+    .btn-block {
+        width: 100%;
+    }
+
+    .btn-lg {
+        padding: 15px 30px;
+        font-size: 1.1rem;
+    }
+
+    .calculator-result {
+        background: white;
+        padding: 40px;
+        border-radius: 16px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .result-header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+        .result-header h2 {
+            color: #111827;
+            margin: 0;
+            font-size: 2rem;
+        }
+
+    .goal-display {
+        text-align: center;
+        background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+        padding: 20px;
+        border-radius: 12px;
+        margin-bottom: 25px;
+        color: white;
+    }
+
+    .goal-icon {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+
+    .goal-text {
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+
+    .calorie-display {
+        text-align: center;
+        padding: 30px;
+        background: #fef3c7;
+        border-radius: 16px;
+        border: 4px solid #f59e0b;
+        margin-bottom: 25px;
+    }
+
+    .calorie-value {
+        font-size: 4rem;
+        font-weight: 700;
+        color: #f59e0b;
+        margin-bottom: 10px;
+    }
+
+    .calorie-label {
+        font-size: 1.2rem;
+        color: #92400e;
+        font-weight: 600;
+    }
+
+    .metrics-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin-bottom: 25px;
+    }
+
+    .metric-card {
+        background: #f9fafb;
+        padding: 20px;
+        border-radius: 12px;
+        text-align: center;
+    }
+
+    .metric-icon {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .metric-value {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #111827;
+        margin-bottom: 5px;
+    }
+
+    .metric-label {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #374151;
+        margin-bottom: 5px;
+    }
+
+    .metric-desc {
+        font-size: 0.85rem;
+        color: #6b7280;
+    }
+
+    .macros-section {
+        background: #f0f9ff;
+        padding: 25px;
+        border-radius: 12px;
+        margin-bottom: 25px;
+    }
+
+        .macros-section h4 {
+            margin: 0 0 20px 0;
+            color: #0c4a6e;
+            font-size: 1.2rem;
+        }
+
+    .macro-item {
+        margin-bottom: 20px;
+    }
+
+        .macro-item:last-child {
+            margin-bottom: 0;
+        }
+
+    .macro-header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px;
+    }
+
+    .macro-name {
+        font-weight: 600;
+        color: #374151;
+    }
+
+    .macro-value {
+        font-weight: 700;
+        color: #111827;
+    }
+
+    .macro-bar {
+        height: 25px;
+        background: #e5e7eb;
+        border-radius: 12px;
+        overflow: hidden;
+        margin-bottom: 5px;
+    }
+
+    .macro-fill {
+        height: 100%;
+        transition: width 1s ease;
+    }
+
+    .protein-fill {
+        background: linear-gradient(90deg, #ef4444 0%, #dc2626 100%);
+    }
+
+    .carbs-fill {
+        background: linear-gradient(90deg, #3b82f6 0%, #2563eb 100%);
+    }
+
+    .fats-fill {
+        background: linear-gradient(90deg, #10b981 0%, #059669 100%);
+    }
+
+    .macro-percentage {
+        font-size: 0.85rem;
+        color: #6b7280;
+        text-align: right;
+    }
+
+    .input-summary {
+        background: #f9fafb;
+        padding: 20px;
+        border-radius: 12px;
+    }
+
+    .summary-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+        .summary-row:last-child {
+            border-bottom: none;
+        }
+
+    .summary-label {
+        font-weight: 600;
+        color: #6b7280;
+    }
+
+    .summary-value {
+        font-weight: 700;
+        color: #111827;
+    }
+
+    .info-section {
+        background: #fef3c7;
+        padding: 30px;
+        border-radius: 16px;
+        border-left: 4px solid #f59e0b;
+    }
+
+        .info-section h3 {
+            margin: 0 0 15px 0;
+            color: #92400e;
+        }
+
+        .info-section p {
+            margin: 0;
+            color: #78350f;
+            line-height: 1.7;
+        }
+</style>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,115 @@
+﻿@model FitnessTracker.Models.Workout
+@{
+    ViewData["Title"] = "Workout Details";
+}
+
+<div class="details-container">
+    <div class="details-header">
+        <div class="header-icon">@Model.Icon</div>
+        <div class="header-info">
+            <h1>@Model.Title</h1>
+            <span class="workout-type-badge">@Model.Type</span>
+        </div>
+    </div>
+
+    <div class="details-body">
+        <div class="detail-row">
+            <span class="label">Description:</span>
+            <span class="value">@(string.IsNullOrEmpty(Model.Description) ? "No description" : Model.Description)</span>
+        </div>
+
+        <div class="detail-row">
+            <span class="label">📅 Workout Date:</span>
+            <span class="value">@Model.WorkoutDate.ToString("MMMM dd, yyyy")</span>
+        </div>
+
+        <div class="detail-row">
+            <span class="label">⏱️ Duration:</span>
+            <span class="value">@Model.DurationMinutes minutes</span>
+        </div>
+
+        <div class="detail-row">
+            <span class="label">🔥 Calories Burned:</span>
+            <span class="value">@Model.CaloriesBurned kcal</span>
+        </div>
+
+        <div class="detail-row">
+            <span class="label">✅ Created:</span>
+            <span class="value">@Model.CreatedAt.ToString("MMMM dd, yyyy h:mm tt")</span>
+        </div>
+    </div>
+
+    <div class="details-actions">
+        <a href="/Workout/Edit/@Model.Id" class="btn btn-warning">Edit Workout</a>
+        <a href="/Workout/Index" class="btn btn-secondary">Back to List</a>
+        <a href="/Workout/Delete/@Model.Id" class="btn btn-danger" onclick="return confirm('Delete this workout?')">Delete</a>
+    </div>
+</div>
+
+<style>
+    .details-container {
+        max-width: 800px;
+        margin: 50px auto;
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        overflow: hidden;
+    }
+
+    .details-header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 40px;
+        display: flex;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .header-icon {
+        font-size: 5rem;
+    }
+
+    .header-info h1 {
+        margin: 0 0 15px 0;
+        font-size: 2.5rem;
+    }
+
+    .workout-type-badge {
+        background: rgba(255,255,255,0.3);
+        padding: 8px 20px;
+        border-radius: 20px;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    .details-body {
+        padding: 40px;
+    }
+
+    .detail-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        margin-bottom: 15px;
+        background: #f9fafb;
+        border-radius: 12px;
+        border-left: 4px solid #667eea;
+    }
+
+        .detail-row .label {
+            font-weight: 600;
+            color: #6b7280;
+        }
+
+        .detail-row .value {
+            font-size: 1.1rem;
+            color: #111827;
+            font-weight: 600;
+        }
+
+    .details-actions {
+        padding: 0 40px 40px 40px;
+        display: flex;
+        gap: 15px;
+    }
+</style>

@@ -1,0 +1,151 @@
+﻿@model FitnessTracker.Models.Workout
+@{
+    ViewData["Title"] = "Edit Workout";
+}
+
+<div class="form-container">
+    <h1>✏️ Edit Workout</h1>
+
+    <form asp-action="Edit" method="post">
+        <input type="hidden" asp-for="Id" />
+        <input type="hidden" asp-for="UserId" />
+        <input type="hidden" asp-for="CreatedAt" />
+
+        <div class="form-group">
+            <label asp-for="Title"></label>
+            <input asp-for="Title" class="form-control" />
+            <span asp-validation-for="Title" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Description"></label>
+            <textarea asp-for="Description" class="form-control" rows="3"></textarea>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Type"></label>
+            <select asp-for="Type" class="form-control">
+                <option value="">-- Select Type --</option>
+                <option value="Cardio">Cardio</option>
+                <option value="Strength">Strength</option>
+                <option value="Flexibility">Flexibility</option>
+                <option value="Sports">Sports</option>
+                <option value="Yoga">Yoga</option>
+                <option value="CrossFit">CrossFit</option>
+                <option value="Other">Other</option>
+            </select>
+            <span asp-validation-for="Type" class="text-danger"></span>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label asp-for="DurationMinutes"></label>
+                <input asp-for="DurationMinutes" type="number" class="form-control" />
+                <span asp-validation-for="DurationMinutes" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="CaloriesBurned"></label>
+                <input asp-for="CaloriesBurned" type="number" class="form-control" />
+                <span asp-validation-for="CaloriesBurned" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="WorkoutDate"></label>
+            <input asp-for="WorkoutDate" type="date" class="form-control" />
+            <span asp-validation-for="WorkoutDate" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Icon"></label>
+            <div class="icon-picker">
+                <label><input type="radio" asp-for="Icon" value="🏋️" /> 🏋️</label>
+                <label><input type="radio" asp-for="Icon" value="🏃" /> 🏃</label>
+                <label><input type="radio" asp-for="Icon" value="🚴" /> 🚴</label>
+                <label><input type="radio" asp-for="Icon" value="🏊" /> 🏊</label>
+                <label><input type="radio" asp-for="Icon" value="🧘" /> 🧘</label>
+                <label><input type="radio" asp-for="Icon" value="⚽" /> ⚽</label>
+                <label><input type="radio" asp-for="Icon" value="🏀" /> 🏀</label>
+                <label><input type="radio" asp-for="Icon" value="💪" /> 💪</label>
+            </div>
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="btn btn-success btn-lg">Update Workout</button>
+            <a href="/Workout/Index" class="btn btn-secondary btn-lg">Cancel</a>
+        </div>
+    </form>
+</div>
+
+<style>
+    .form-container {
+        max-width: 700px;
+        margin: 30px auto;
+        background: white;
+        padding: 40px;
+        border-radius: 16px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+        .form-container h1 {
+            margin-bottom: 30px;
+        }
+
+    .form-group {
+        margin-bottom: 25px;
+    }
+
+        .form-group label {
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+    .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .icon-picker {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+        .icon-picker label {
+            cursor: pointer;
+            font-size: 2rem;
+            padding: 10px;
+            border: 2px solid transparent;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+            .icon-picker label:hover {
+                background: #f3f4f6;
+                border-color: #667eea;
+            }
+
+        .icon-picker input[type="radio"] {
+            display: none;
+        }
+
+            .icon-picker input[type="radio"]:checked + label,
+            .icon-picker label:has(input[type="radio"]:checked) {
+                background: #667eea;
+                border-color: #667eea;
+            }
+
+    .form-actions {
+        display: flex;
+        gap: 15px;
+        margin-top: 30px;
+    }
+</style>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

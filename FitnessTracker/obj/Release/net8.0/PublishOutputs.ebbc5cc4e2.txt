@@ -1,0 +1,7 @@
+D:\MyProjects\FitnessTracker\FitnessTracker\obj\Release\net8.0\PubTmp\Out\FitnessTracker.exe
+D:\MyProjects\FitnessTracker\FitnessTracker\obj\Release\net8.0\PubTmp\Out\appsettings.Development.json
+D:\MyProjects\FitnessTracker\FitnessTracker\obj\Release\net8.0\PubTmp\Out\appsettings.json
+D:\MyProjects\FitnessTracker\FitnessTracker\obj\Release\net8.0\PubTmp\Out\FitnessTracker.dll
+D:\MyProjects\FitnessTracker\FitnessTracker\obj\Release\net8.0\PubTmp\Out\FitnessTracker.deps.json
+D:\MyProjects\FitnessTracker\FitnessTracker\obj\Release\net8.0\PubTmp\Out\FitnessTracker.runtimeconfig.json
+D:\MyProjects\FitnessTracker\FitnessTracker\obj\Release\net8.0\PubTmp\Out\FitnessTracker.pdb
