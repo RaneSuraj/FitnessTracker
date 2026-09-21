@@ -1,0 +1,6 @@
+services:
+  app:
+    build: .
+    image: fitness-tracker:latest
+    ports:
+      - "8081:8080"
