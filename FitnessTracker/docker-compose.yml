@@ -4,3 +4,6 @@ services:
     image: fitness-tracker:latest
     ports:
       - "8081:8080"
+    environment:
+      - APP_DEVELOPER="Guruprasad Bhise"
+      - DEVOPS_ENGINEER="Suraj Rane"
