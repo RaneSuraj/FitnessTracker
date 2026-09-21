@@ -20,11 +20,12 @@ jobs:
 
     - name: Build and Push Docker image
       run: |
-        docker build -t ${{ secrets.DOCKER_USERNAME }}/fitness-tracker:latest -t ${{ secrets.DOCKER_USERNAME }}/fitness-tracker:v${{ github.run_number }} .
+        docker build -t ${{ secrets.DOCKER_USERNAME }}/fitness-tracker:latest -t ${{ secrets.DOCKER_USERNAME }}/fitness-tracker:v${{ github.run_number }} ./FitnessTracker
         docker push ${{ secrets.DOCKER_USERNAME }}/fitness-tracker:latest
         docker push ${{ secrets.DOCKER_USERNAME }}/fitness-tracker:v${{ github.run_number }}
 
     - name: Run application with docker compose
+      working-directory: ./FitnessTracker
       run: docker compose up -d
 
     - name: verify the container status
