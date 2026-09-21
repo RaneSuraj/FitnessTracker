@@ -1,0 +1,10 @@
+# .dockerignore for .NET
+**/bin/
+**/obj/
+.git/
+.gitignore
+Dockerfile
+.dockerignore
+*.user
+*.suo
+.vs/
