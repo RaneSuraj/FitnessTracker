@@ -22,7 +22,6 @@ jobs:
       run: |
         docker build -t ${{ secrets.DOCKER_USERNAME }}/fitness-tracker:latest -t ${{ secrets.DOCKER_USERNAME }}/fitness-tracker:v${{ github.run_number }} ./FitnessTracker
         docker push ${{ secrets.DOCKER_USERNAME }}/fitness-tracker:latest
-        docker push ${{ secrets.DOCKER_USERNAME }}/fitness-tracker:v${{ github.run_number }}
 
     - name: Run application with docker compose
       working-directory: ./FitnessTracker
